@@ -7,7 +7,7 @@ import DocsLayout from "../../layouts/DocsLayout.astro";
 
 export async function getStaticPaths() {
   const allDocs = await getCollection("docs");
-  return allDocs.map((docs) => ({
+  return allDocs.map((docs: { id: any; }) => ({
     params: { slug: docs.id },
     props: docs,
   }));
@@ -19,21 +19,21 @@ const docs = Astro.props;
 const { Content, headings } = await render(docs);
 
 const { title, description, excerpt, banner, topics = [], category } = docs.data;
-const relatedDocs = AllDocs.filter((post) => {
+const relatedDocs = AllDocs.filter((post: { data: { topics: any[]; title: any; }; }) => {
     if (!post.data || !Array.isArray(post.data.topics) || !Array.isArray(docs.data.topics)) {
       return false;
     }
 
     // Check if there is at least one shared topic
-    const hasMatchingTopics = post.data.topics.some((t) => docs.data.topics.includes(t));
+    const hasMatchingTopics = post.data.topics.some((t: any) => docs.data.topics.includes(t));
 
     return post.data.title !== title && hasMatchingTopics;
   }) 
-  .map((post) => ({
+  .map((post: { id: any; data: { title: any; }; }) => ({
     id: post.id, // Use `id` instead of `slug`
     data: { title: post.data.title ?? "Untitled" }
   }))
-  .sort((a, b) => a.data.title.localeCompare(b.data.title)) // Sort alphabetically
+  .sort((a: { data: { title: string; }; }, b: { data: { title: any; }; }) => a.data.title.localeCompare(b.data.title)) // Sort alphabetically
   .slice(0, 3); // Limit to 3 results
 
 const EDIT_URL = GithubRepo.editUrl;

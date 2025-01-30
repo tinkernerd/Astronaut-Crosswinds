@@ -7,6 +7,9 @@ import icon from 'astro-icon';
 import vercel from '@astrojs/vercel';
 
 
+import image from '@astrojs/image';
+
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://aviation-notebook.tinkernerd.com',
@@ -15,8 +18,9 @@ export default defineConfig({
     expressiveCode(expressiveCodeOptions),
     sitemap(),
     mdx(),
-    icon()
-    ],
+    icon(),
+    image()
+  ],
   prefetch: true,
   adapter: vercel()
 });
