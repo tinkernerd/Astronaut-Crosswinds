@@ -1,0 +1,61 @@
+---
+import { getCollection } from "astro:content";
+import { SortDocs } from "../../js/utils";
+
+const TheDocs = await getCollection("docs");
+
+const formattedDocs = SortDocs(TheDocs, { sortByTitle: true, sortByDate: false });
+
+interface Props {
+  header?: string;
+  category?: string;
+}
+const { category } = Astro.props;
+---
+
+<nav class="docs-nav" aria-labelledby="grid-left">
+  <ul class="nav-groups">
+    <div class="nav-group">
+      <h2 class="title"><a href="/{category}">{category}</a>
+        <hr /></h2>
+      <ul>
+        {
+          formattedDocs.map((docs: any) => (
+            <li class="nav-link">
+              <a href={`/docs/${docs.id}`}>{docs.data.title}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <script is:inline>
+      window.addEventListener("DOMContentLoaded", () => {
+        var target = document.querySelector('[aria-current="page"]');
+        if (target && target.offsetTop > window.innerHeight - 100) {
+          document.querySelector(".nav-groups").scrollTop = target.offsetTop;
+        }
+      });
+    </script>
+    <script is:inline>
+      window.addEventListener("DOMContentLoaded", () => {
+        // Get all nav links
+        const navLinks = document.querySelectorAll(".nav-link a");
+    
+        // Get the current URL path
+        const currentPath = window.location.pathname;
+    
+        // Loop through links and set `aria-current` for the active link
+        navLinks.forEach(link => {
+          if (link.getAttribute("href") === currentPath) {
+            link.setAttribute("aria-current", "page");
+          }
+        });
+    
+        // Scroll the active link into view if needed
+        const activeLink = document.querySelector('[aria-current="page"]');
+        if (activeLink && activeLink.offsetTop > window.innerHeight - 100) {
+          document.querySelector(".nav-groups").scrollTop = activeLink.offsetTop;
+        }
+      });
+    </script>
+

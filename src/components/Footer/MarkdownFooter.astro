@@ -1,0 +1,17 @@
+---
+type Props = {
+  editHref: string
+}
+const { editHref } = Astro.props
+---
+<footer class="markdown-footer">
+  <div class="edit-href">
+    { editHref &&
+      <a href={editHref}>Edit this page ✎ </a>
+    }
+  </div>
+  <div class="back-to-top">
+    <a href="#">Back to top ⬆</a>
+  </div>
+</footer>
+

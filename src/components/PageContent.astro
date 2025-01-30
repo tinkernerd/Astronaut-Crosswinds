@@ -1,0 +1,36 @@
+---
+import MarkdownFooter from "@/components/Footer/MarkdownFooter.astro";
+// utils imports
+import { slugify } from "../js/utils";
+
+const { title, excerpt, editUrl, topics, category, banner } = Astro.props;
+
+
+---
+
+<article id="article" class="content">
+  <section class="main-section">
+    {category && topics &&<section class="tags-category">
+      <a href={`/category/${category}/`} class="badge">{category}</a>
+      <span class="divider">|</span>
+      <small>
+        {Array.isArray(topics) ? (
+          topics.map((t: string) => (
+          <small>
+            <a href={`/${slugify(category)}/${slugify(t)}/`} class="badge">{t}</a>
+          </small>
+          ))
+        ) : (
+          <span>No topics</span> // Fallback in case topics is missing
+        )}
+      </small>
+    </section>}
+      
+  <h1 class="content-title" id="overview">{title}</h1>
+  <hr />
+  {excerpt && <p>{excerpt}</p>}
+    <slot />
+    <MarkdownFooter editHref={editUrl} />
+  </section>
+</article>
+

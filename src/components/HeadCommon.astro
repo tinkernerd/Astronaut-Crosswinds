@@ -1,0 +1,58 @@
+---
+//import '../styles/theme.scss'
+import '../styles/index.scss'
+
+import { siteConfig } from "@/site-config";
+
+interface Props {
+    title: string;
+    description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!-- Global Metadata -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
+<meta name="generator" content={Astro.generator} />
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+
+<link rel="sitemap" href="/sitemap.xml" />
+
+<title>{siteConfig.title} - {title}</title>
+<meta name="description" content={description} />
+
+<!-- Scrollable a11y code helper -->
+<script src="/scripts/make-scrollable-code-focusable.js" is:inline></script>
+<script src="https://unpkg.com/feather-icons@4.29.2/dist/feather.min.js" is:inline></script>
+<script is:inline>
+  // Clear saved theme in localStorage
+  //localStorage.removeItem('theme');
+
+  const root = document.documentElement;
+
+  // Function to apply the theme
+  function applyTheme(theme) {
+    if (theme === 'dark') {
+      root.classList.add('theme-dark');
+    } else {
+      root.classList.remove('theme-dark');
+    }
+  }
+
+  // Detect system preference
+  const systemPreference = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+
+  // Apply system preference as default
+  applyTheme(systemPreference);
+
+
+
+  // Listen for system preference changes
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
+    const newSystemTheme = event.matches ? 'dark' : 'light';
+    applyTheme(newSystemTheme);
+  });
+</script>

@@ -1,0 +1,30 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface Props {
+	label: string;
+	value: string;
+	icon: Parameters<typeof Icon>[0]['name'];
+	width?: string;
+	options: Array<{
+		label: string;
+		value: string;
+		selected: boolean;
+	}>;
+}
+
+const props = Astro.props;
+---
+
+<label style={`--sl-select-width: ${props.width}`}>
+	<span class="sr-only">{props.label}</span>
+	<Icon name={props.icon} class="icon label-icon" />
+	<select id="theme-selector" value={props.value} autocomplete="off"
+		onchange="handleThemeChange(this.value)"> <!-- ✅ Pass selected value to function -->
+		{
+			props.options.map(({ value, selected, label }) => (
+				<option value={value} selected={selected} set:html={label} />
+			))
+		}
+	</select>
+</label>

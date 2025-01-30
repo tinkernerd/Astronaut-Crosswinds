@@ -1,0 +1,91 @@
+---
+import { Icon } from "astro-icon/components";
+
+// Function to get correct icon
+const getIconForTheme = (theme: string): string => {
+  switch (theme) {
+    case "dark":
+      return "tabler:moon"; // 🌙 Dark mode
+    case "light":
+      return "tabler:sun"; // ☀️ Light mode
+    default:
+      return "tabler:device-laptop"; // 💻 Auto mode
+  }
+};
+
+// Get saved theme
+const savedTheme: string = (typeof window !== "undefined" && localStorage.getItem("theme")) || "auto";
+const currentIcon: string = getIconForTheme(savedTheme);
+---
+
+<label>
+  <span class="sr-only">Theme Select</span>
+  <Icon id="theme-icon" name={currentIcon} class="icon label-icon" />
+  <select id="theme-selector" autocomplete="off">
+    <option value="auto" selected={savedTheme === "auto"}>Auto</option>
+    <option value="dark" selected={savedTheme === "dark"}>Dark</option>
+    <option value="light" selected={savedTheme === "light"}>Light</option>
+  </select>
+</label>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const selectElement = document.getElementById("theme-selector") as HTMLSelectElement | null;
+    const iconElement = document.getElementById("theme-icon") as HTMLOrSVGElement | null;
+
+    if (!selectElement || !iconElement) return; // ✅ Prevent `null` errors
+
+    function applyTheme(theme: string) {
+      if (theme === "dark") {
+        document.documentElement.classList.add("theme-dark");
+      } else {
+        document.documentElement.classList.remove("theme-dark");
+      }
+      localStorage.setItem("theme", theme);
+      updateIcon(theme);
+    }
+
+    function updateIcon(theme: string) {
+    const iconElement = document.getElementById("theme-icon");
+
+    if (!iconElement || !(iconElement instanceof HTMLElement)) return; // ✅ Ensure it's an HTML element
+
+    let newIcon: string;
+    switch (theme) {
+      case "dark":
+        newIcon = "tabler:moon";
+        break;
+      case "light":
+        newIcon = "tabler:sun";
+        break;
+      default:
+        newIcon = "tabler:device-laptop";
+    }
+
+    if (iconElement instanceof HTMLElement) {
+      iconElement.setAttribute("name", newIcon); // ✅ Now TypeScript won't complain
+    }
+  }
+
+    const savedTheme = localStorage.getItem("theme") || 
+      (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+
+    applyTheme(savedTheme);
+    selectElement.value = savedTheme;
+
+    selectElement.addEventListener("change", (event) => {
+      const target = event.target as HTMLSelectElement | null;
+      if (!target) return;
+
+      const newTheme = target.value;
+      applyTheme(newTheme);
+    });
+
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (event) => {
+      if (localStorage.getItem("theme") === "auto") {
+        const newSystemTheme = event.matches ? "dark" : "light";
+        applyTheme(newSystemTheme);
+      }
+    });
+  });
+</script>

@@ -1,0 +1,99 @@
+// Sidebar
+.sidebar-nav {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  margin-top: 10px; 
+  //padding: 0.1rem 1rem;
+  
+
+  &-inner {
+    height: 100%;
+    padding: 0;
+    padding-top: var(--doc-padding);
+    overflow: auto;
+  }
+}
+
+// TOC Styling
+.toc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  > li {
+    margin-bottom: 0.5em;
+  }
+}
+
+.heading {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.active-toc-item {
+  font-weight: bold;
+}
+
+// Header Links
+.header-link {
+  font-size: 1em;
+  transition: border-inline-start-color 100ms ease-out, background-color 200ms ease-out;
+  padding-inline-start: 0.5rem;
+
+  a {
+    display: inline-flex;
+    gap: 0.5em;
+    width: 100%;
+    font: inherit;
+    padding: 0.425rem 0;
+    line-height: 1.3;
+    color: inherit;
+    text-decoration: none;
+    unicode-bidi: plaintext;
+
+    &:hover,
+    &:focus {
+      color: var(--theme-text);
+      text-decoration: underline;
+    }
+  }
+
+  svg {
+    opacity: 0.6;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &:focus-within {
+    border-inline-start-color: var(--theme-text);
+  }
+
+  // Depth-specific styling
+  &.depth-2 {
+    padding-inline-start: 1.5rem;
+    border-inline-start: 1px dashed var(--theme-text);
+  }
+
+  &.depth-3 {
+    padding-inline-start: 2rem;
+    border-inline-start: 2px dashed var(--theme-text);
+  }
+
+  &.depth-4 {
+    padding-inline-start: 3rem;
+    border-inline-start: 3px solid var(--theme-text);
+  }
+}
+
+// Edit-on-GitHub Link
+.edit-on-github {
+  text-decoration: none;
+  font: inherit;
+  color: inherit;
+  font-size: 1rem;
+}

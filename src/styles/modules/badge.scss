@@ -1,0 +1,19 @@
+.badge {
+  --var: 0; 
+  //add variables for badge
+  padding: 4px 10px;
+  background-color: var(--badge-bg);
+  border-radius: var(--radius-sm);
+  color: hsl(var(--muted));
+  text-decoration: none;
+  letter-spacing: 0.054em;
+  text-transform: uppercase;
+  font-size: var(--fs-sm);
+
+
+  &:hover {
+    background-color: var(--theme-accent-muted);
+    opacity: 0.8;
+  }
+
+}

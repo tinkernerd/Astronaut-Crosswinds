@@ -1,0 +1,48 @@
+---
+import HeadCommon from '../components/HeadCommon.astro'
+import Header from '../components/Header/Header.astro'
+import PageContent from '../components/PageContent.astro'
+import LeftSidebar from '../components/LeftSidebar/LeftSidebar.astro'
+import RightSidebar from '../components/RightSidebar/RightSidebar.astro'
+import MainFooter from '../components/Footer/MainFooter.astro'
+
+
+const {
+    title,
+    description,
+    excerpt,
+    banner,
+    editUrl,
+    headings,
+    topics,
+    category,
+    relatedDocs
+} = Astro.props;
+
+const hasRightSidebar = headings && headings.length > 0;
+---
+
+<html lang="en">
+  <head>
+    <HeadCommon {title} {description} />
+  </head>
+  <body>
+    <Header />
+    <main class={`layout ${hasRightSidebar ? '' : 'no-right-sidebar'}`}>
+      <aside id="grid-left" class="grid-sidebar" title="Site Navigation">
+        <LeftSidebar {category} />
+      </aside>
+      <div id="grid-main">
+        <PageContent {title} {editUrl} {excerpt} {banner} {topics} {category} {banner}>
+          <slot />
+        </PageContent>
+      </div>
+      {hasRightSidebar && (
+        <aside id="grid-right" class="grid-sidebar" title="Table of Contents">
+          <RightSidebar {editUrl} {headings} {relatedDocs} {category} />
+        </aside>
+      )}
+    </main>
+    <MainFooter />
+  </body>
+</html>

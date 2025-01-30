@@ -1,0 +1,36 @@
+<style>
+  .message-container-scroll {
+      border: 3px dashed #004080;
+      border-radius: 10px;
+      padding: 20px;
+      background-color: #e6f7ff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      overflow: hidden;
+  }
+  .message-scroll {
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      color: #004080;
+      white-space: nowrap;
+      overflow: hidden;
+      display: inline-block;
+      animation: scroll-text 10s linear infinite;
+  }
+
+  @keyframes scroll-text {
+      0% {
+          transform: translateX(100%);
+      }
+      100% {
+          transform: translateX(-100%);
+      }
+  }
+</style>
+
+<div class="message-container-scroll">
+    <div class="message-scroll">
+        ~ ~ ~ Fly safe! ~ ~ ~ Fly safe! ~ ~ ~ Fly safe! ~ ~ ~ Fly safe! ~ ~ ~
+    </div>
+</div>

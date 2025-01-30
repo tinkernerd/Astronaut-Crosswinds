@@ -1,0 +1,74 @@
+label {
+  --label-icon-size: 1.5rem;
+  --caret-size: 1.25rem;
+  --inline-padding: 0.5rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;  // Increase space between icon and text
+  color: var(--theme-text);
+}
+
+label:hover {
+  color: var(--theme-text);
+}
+.icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.label-icon {
+  font-size: var(--label-icon-size);
+  inset-inline-start: 0;
+}
+
+
+select {
+  border: 1px solid hsl(var(--accent-color-mid), 1);  // Add a border to the select
+  border-radius: 0.375rem;  // Rounded corners (adjust as needed)
+  padding-block: 0.75rem;  // Increased padding for more space inside the select
+  padding-inline: calc(var(--label-icon-size) + var(--inline-padding) + 0.25rem)
+    calc(var(--caret-size) + var(--inline-padding) + 0.25rem);
+  margin-inline: calc(var(--inline-padding) * -1);
+  width: calc(var(--select-width) + var(--inline-padding) * 2);
+  background-color: var(--theme-navbar-bg);  // Match background color
+  text-overflow: ellipsis;
+  color: var(--theme-text);  // Match text color
+  cursor: pointer;
+  appearance: none;
+  font-size: 1rem;  // Consistent font size with header
+  height: auto;  // Allow height to adjust based on content
+  min-height: 2.5rem;  // Ensure minimum height for consistency
+  display: inline-flex;
+  align-items: center;  // Vertically center the text inside the select
+  line-height: 1.25;  // Adjust line-height to avoid text cut off
+  font-family: "Satoshi",sans-serif;
+
+}
+
+select:hover {
+  //background-color: hsl(var(--accent-color-mid), 1); // Hover effect like nav links
+  color: var(--theme-text);
+}
+
+select:focus {
+  outline: none;
+  border: 1px solid var(--theme-accent);  // Outline on focus
+  border-radius: 0.375rem;  // Rounded focus border
+}
+option {
+  background-color: var(--theme-navbar-bg);  // Match background color
+  color: var(--theme-text);  // Match text color
+  font-family: inherit;  // Inherit the font family from the select element
+  font-size: 1rem;  // Ensure font size is consistent with select
+  padding: 0.5rem;  // Add padding to make the text more readable
+}
+@media (min-width: 50rem) {
+  select {
+    font-size: 1.25rem;  // Larger font for bigger screens
+    height: auto;  // Allow the height to adjust based on content
+    min-height: 2.5rem;  // Set a consistent height on larger screens
+  }
+}

@@ -1,0 +1,39 @@
+
+table {
+  border-collapse: collapse;
+  margin-bottom: 10px;
+  width: 100%;
+  table-layout: fixed;
+}
+
+table caption {
+  text-align: left;
+}
+
+td,
+th {
+  padding: 6px;
+  text-align: left;
+  vertical-align: top;
+  word-wrap: break-word;
+}
+
+thead {
+  border-bottom: 1px solid var(--border);
+}
+
+tfoot {
+  border-top: 1px solid var(--border);
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--background);
+}
+
+tbody tr:nth-child(even) button {
+  background-color: var(--background-alt);
+}
+
+tbody tr:nth-child(even) button:hover {
+  background-color: var(--theme-bg);
+}

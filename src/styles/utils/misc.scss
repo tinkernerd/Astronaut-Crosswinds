@@ -1,0 +1,36 @@
+@use 'include-media' as *;
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+}
+
+
+.hero-image {
+  box-shadow: var(--shadow-md);
+  object-fit: cover;
+  border-radius: var(--radius-md);
+
+  @include media(">=desktop"){
+    border-radius: var(--radius-md);
+  }
+}
+
+
+.note-image {
+  box-shadow: var(--shadow-md);
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  padding-top: 10px;
+
+  @include media(">=desktop"){
+    border-radius: var(--radius-md);
+  }
+}
+
+

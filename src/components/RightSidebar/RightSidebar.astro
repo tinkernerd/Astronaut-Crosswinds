@@ -1,0 +1,20 @@
+---
+import RelatedNotes from './RelatedNotes.astro';
+import TableOfContents from './TableOfContents.astro';
+
+type Props = {
+  editUrl: string;
+  headings: Array<any>;
+  relatedDocs: Array<any>;
+  category: string;
+}
+const {headings, relatedDocs, category} = Astro.props
+---
+
+<nav class="sidebar-nav" aria-labelledby="grid-right">
+  <div class="sidebar-nav-inner">
+    {headings && headings.length > 0 && <TableOfContents {headings} />}
+    <RelatedNotes {relatedDocs} {category} />
+  </div>
+</nav>
+
