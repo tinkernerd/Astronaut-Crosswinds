@@ -1,0 +1,30 @@
+footer {
+  border-top: 1px solid var(--border);  
+  color: var(--text-muted);
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+}   
+
+body > footer {
+  margin-top: 40px;
+}
+
+.markdown-footer {
+  border-top: 1px solid var(--border);
+  padding-top: 10px;
+  color: var(--text-muted);
+  margin-top:10px;
+
+  /* Use Flexbox to position the elements */
+  display: flex;
+  justify-content: space-between; /* Push elements to opposite sides */
+  align-items: center; /* Center them vertically */
+
+  a {
+    color: var(--text-muted);
+    text-decoration: none;
+  }
+}
+
+
