@@ -1,6 +1,4 @@
 @use '../utils/include-media.scss' as *;
-$breakpoints: 
-  (ultrawide: 1440px);
 .main-header {
   z-index: 11;
   height: var(--theme-navbar-height);
