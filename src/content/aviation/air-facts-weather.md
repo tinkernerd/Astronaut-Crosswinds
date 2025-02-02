@@ -1,18 +1,17 @@
 ---
 title: Air Facts -  Weather Geeks
 dateCreated: 2024-10-17T16:35
+dateUpdated: 2025-01-31T14:41
 description: Air Facts and Weather
 excerpt: One of the really great things about learning to fly is the new relationship you’ll develop with the study of weather. You’ll acquire a knowledge of highs, lows, and fronts and how these phenomena affect weather patterns.
 type: Resource
-topics: 
+topic: 
   - Weather
-tags:
-  - weather
-  - aviation
 Chapter: Chapter01
 status: Active
 Book: Volume01
-category: Aviation
+categories: 
+  - Aviation
 ---
 
 ## Review

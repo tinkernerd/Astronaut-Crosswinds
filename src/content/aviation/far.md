@@ -1,17 +1,15 @@
 ---
-title: 'Federal Aviation Regulations'
-description: 'Federal Aviation Regulations'
+title: Federal Aviation Regulations
+description: Federal Aviation Regulations
 type: Resource
 status: Active
-category: Aviation
+categories: 
+  - Aviation
 dateCreated: 2024-04-09
-tags:
-  - far
-  - aviation
-  - resources
-topics: 
+topic: 
   - Resources
   - Regulations
+dateUpdated: 2025-01-31T14:41:48
 ---
 
 # FAR

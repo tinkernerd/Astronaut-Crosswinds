@@ -1,7 +1,35 @@
 .main-layout {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 20px auto;
   padding: 0 10px;
   word-wrap: break-word;
   text-rendering: optimizeLegibility;
+}
+.markdown-header {
+  h1 {
+    padding: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  .title {
+    a{
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    }
+  }
+  .tags-category {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    //margin-left: 10px;
+  }
+  .tags-category {
+    .divider {
+      margin-right: 10px;
+    }
+  }
+}
+.markdown-header{
+  width: 100%;
 }

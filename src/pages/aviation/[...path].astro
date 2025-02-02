@@ -1,0 +1,30 @@
+---
+import DocsLayout from "../../layouts/DocsLayout.astro";
+import { getCollection, render } from 'astro:content';
+
+// Define getStaticPaths() to generate static paths dynamically
+export async function getStaticPaths() {
+  const aviationArticles = await getCollection("aviation");
+  return aviationArticles.map((article) => ({
+    params: { path: article.id },
+  }));
+}
+
+// Extract the dynamic path from URL
+const { path } = Astro.params as { path?: string | string[] };
+const slug = typeof path === "string" ? path : Array.isArray(path) ? path.join("/") : "index";
+
+// Fetch aviation articles
+const aviationArticles = await getCollection("aviation");
+
+// Find the matching Markdown file
+const article = aviationArticles.find((entry) => entry.id === slug);
+if (!article) {
+  throw new Error(`Article not found for path: /aviation/${slug}`);
+}
+
+// ✅ Use `render()` to properly convert Markdown to HTML
+const { Content, headings } = await render(article);
+---
+
+<DocsLayout collection="aviation" {article} {Content} {headings} />

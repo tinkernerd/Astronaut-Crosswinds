@@ -1,24 +1,19 @@
 ---
 title: Health & Medical Considerations in Aviation
 excerpt: A pilot’s health and medical fitness are critical to ensuring safe operations. From understanding the effects of altitude to meeting medical certification requirements, this guide provides essential knowledge and resources to keep you flying safely.
-tags:
-  - airports
-  - aviation
-  - flight
-  - health
-  - medical
-  - dashboard
-category: Aviation
-topics:
+categories: 
+  - Aviation
+topic:
   - Health
   - Medical
 type: Dashboard
 status: Active
-dateCreated: 2024-12-30
 banner: {
   src: "https://media.tinkernerd.dev/obsidian-posters/health.jpg",
   alt: "Health & Medical Considerations in Aviation"
 }
+dateCreated: 2024-12-30
+dateUpdated: 2025-01-31T14:41:48
 ---
 
 ## 🛡️ Key Health & Medical Concepts for Pilots:

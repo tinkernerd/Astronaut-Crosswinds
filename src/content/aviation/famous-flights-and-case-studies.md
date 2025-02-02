@@ -1,14 +1,8 @@
 ---
 title: Famous Flights and Case Studies
-tags:
-  - airports
-  - aviation
-  - flight
-  - case studies
-  - history
-  - dashboard
-category: Aviation
-topics:
+categories: 
+  - Aviation
+topic:
   - Famous Flights
   - Case Studies
 type: Dashboard
@@ -18,6 +12,7 @@ banner: {
   src: "https://media.tinkernerd.dev/obsidian-posters/famous-flights.jpg",
   alt: "Famous Flights and Case Studies"
   }
+dateUpdated: 2025-01-31T14:41:48
 ---
 
 # ✈️ Famous Flights and Case Studies 🌍

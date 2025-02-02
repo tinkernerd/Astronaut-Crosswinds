@@ -1,0 +1,55 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  src: string;
+  category: string;
+}
+
+const { title, description, src, category } = Astro.props;
+import { slugify } from '@/js/utils';
+---
+
+<style>
+  .category-card {
+    display: flex;
+    align-items: center;
+    background: #1e1e1e;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+  .category-card:hover {
+    transform: scale(1.02);
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+  }
+  .category-content {
+    flex: 1;
+    color: #fff;
+  }
+  .category-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .category-description {
+    font-size: 1rem;
+    color: #ccc;
+  }
+  .categories-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+  }
+</style>
+
+<a href={`/${slugify(category)}/${src}}`} class="category-card">
+  <div class="category-content">
+    <div class="category-title">{title}</div>
+    <div class="category-description">{description}</div>
+  </div>
+</a>

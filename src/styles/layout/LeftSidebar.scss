@@ -1,13 +1,19 @@
 .docs-nav {
   padding: 0rem 1rem;
+  margin-top: 0;
   nav {
     list-style: none;
-    
-
-  }
+    }
   ul {
     list-style: none;
     padding: 0; 
+  }
+  .heading {
+    //font-size: 1rem;
+    font-weight: bold;
+    h2 {
+      margin-top: 0;
+    }
   }
 }
 
@@ -28,24 +34,7 @@
     margin-bottom: var(--theme-navbar-height);
   }
 }
-.nav-group {
 
-  
-  a {
-    color: var(--theme-text);
-  }
-  
-  a:hover {
-    color: var(--theme-bg-accent);
-  }
-
-  .title {
-
-    a {
-      text-decoration: none; // Optional: Ensure links look clean
-    }
-  }
-}
 
 .nav-link {
   margin: 0;
@@ -73,8 +62,15 @@
   }
 } 
 
+// Responsive Adjustments
+
 @media (min-width: 50em) {
   .nav-groups {
     padding: 0;
+  }
+}
+@media (max-width: 1024px) { 
+  .docs-nav {
+    display: none; // Hides sidebar on small screens
   }
 }

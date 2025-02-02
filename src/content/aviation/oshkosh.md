@@ -2,18 +2,15 @@
 title: The Legendary AirVenture
 description: A giant fly-in in Oshkosh Wis.
 excerpt: A giant fly-in in Oshkosh Wis.
-tags:
-  - airventure
-  - eaa
-  - flight
-  - aviation
 status: Active
 type: Resource
-topics:
+topic:
   - Festival
   - Events
 dateCreated: 2024-04-09
-category: Aviation
+categories: 
+  - Aviation
+dateUpdated: 2025-01-31T14:41:48
 ---
 ## FAA Info
 - [FAA Notice – AirVenture flight procedures](https://www.eaa.org/airventure/eaa-fly-in-flying-to-oshkosh/eaa-airventure-oshkosh-notam)*

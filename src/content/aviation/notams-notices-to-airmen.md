@@ -1,22 +1,19 @@
 ---
 title: Notices to Airmen (NOTAMs)
 excerpt: NOTAMs (Notices to Airmen) are critical pieces of information that every pilot must review before a flight. They provide real-time updates on conditions and restrictions that could affect your flight. This guide covers the types of NOTAMs and offers resources to ensure you're always up to date.
-tags:
-  - airports
-  - aviation
-  - flight
+categories: 
+  - Aviation
+topic:
   - NOTAMs
-  - dashboard
-category: Aviation
-topics:
-  - NOTAMs
+  - Navigation
 type: Dashboard
 status: Active
 dateCreated: 2024-12-30
 banner: {
   src: "https://fixingnotams.org/wp-content/uploads/2019/11/Field-Guide.png",
-  alt: "Notams"
+  alt: "NOTAMs"
 }
+dateUpdated: 2025-01-31T14:41:48
 ---
 ## 🛬 Key NOTAM Concepts for Pilots:
 

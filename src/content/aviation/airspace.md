@@ -2,15 +2,11 @@
 title: Aviation Airspace
 description: Airspace is the invisible structure of the skies, governing how and where aircraft can operate. 
 excerpt: Airspace is the invisible structure of the skies, governing how and where aircraft can operate. Knowing airspace classifications and requirements is critical for every pilot. This guide breaks down the types of airspace and offers resources to help you fly safely and within the rules.
-tags:
-  - airports
-  - aviation
-  - flight
-  - airspace
-  - dashboard
-category: Aviation
-topics:
+categories: 
+  - Aviation
+topic:
   - Airspace
+  - Navigation
 type: Dashboard
 status: Active
 dateCreated: 2024-12-30
@@ -18,6 +14,7 @@ banner: {
 	src: "https://images6.alphacoders.com/616/616664.jpg",
 	alt: "Airspace Image"
 }
+dateUpdated: 2025-01-31T14:41:48
 ---
 # ✈️ Understanding Airspace 🌌
 ___

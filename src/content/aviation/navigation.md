@@ -1,14 +1,9 @@
 ---
 title: Navigation for Pilots
 excerpt: Navigation is at the heart of every successful flight. Whether you're flying VFR or IFR, understanding navigation principles and using the right tools can make all the difference. This guide covers essential concepts and resources to help you stay on course.
-tags:
-  - airports
-  - aviation
-  - flight
-  - navigation
-  - dashboard
-category: Aviation
-topics:
+categories: 
+  - Aviation
+topic:
   - Navigation
 type: Dashboard
 status: Active
@@ -17,6 +12,7 @@ banner: {
   src: "https://www.aeroclass.org/wp-content/uploads/2022/05/taxiway-night-1024x682.jpg",
   alt: "Navigation"
 }
+dateUpdated: 2025-01-31T14:41:48
 ---
 
 ## 🛩 Key Navigation Concepts for Pilots:

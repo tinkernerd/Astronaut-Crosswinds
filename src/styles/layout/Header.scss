@@ -1,5 +1,6 @@
 @use '../utils/include-media.scss' as *;
-
+$breakpoints: 
+  (ultrawide: 1440px);
 .main-header {
   z-index: 11;
   height: var(--theme-navbar-height);
@@ -11,7 +12,7 @@
   overflow: hidden;
   position: sticky;
   top: 0;
-  margin-bottom: 1rem;
+  //margin-bottom: 1rem;
 
   .logo {
     flex: 1;
@@ -42,7 +43,7 @@
     /* Change SVG fill on .logo hover */
     &:hover svg #flame,
     &:hover svg #a {
-      fill: var(--theme-accent-muted);
+      fill: var(--theme-navbar-logo);
     }
   
     a {
@@ -57,7 +58,7 @@
   
       &:hover,
       &:focus {
-        color: var(--theme-accent-muted);
+        color: var(--theme-navbar-logo);
       }
     }
   

@@ -1,0 +1,20 @@
+---
+import MarkdownFooter from "./MarkdownFooter.astro";
+import MarkdownHeader from "./MarkdownHeader.astro";
+
+
+// utils imports
+const { title, excerpt, editUrl, topic, category, dateCreated, dateUpdated, author, isArticle, source} = Astro.props;
+
+---
+<section class="main-section">
+  <article id="article" class="content">
+  <MarkdownHeader {title} {excerpt} {topic} {isArticle} {category} {dateCreated} {dateUpdated} {author} {source} />
+    <slot />
+    <MarkdownFooter editHref={editUrl} />
+  </section>
+</article>
+</section>
+
+
+

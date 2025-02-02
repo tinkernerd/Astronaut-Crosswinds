@@ -1,22 +1,20 @@
 ---
 title: When Should You Fly?
 description: Flying is challenging, interesting, and downright fun.
-dateCreated: 2024-10-17T15:53
+excerpt: Before your flight lesson, you must make an important decision – whether to fly today or not. This is commonly referred to as the go/no-go decision. Even though at this stage of your education your flight instructor will help you make this decision, it’s important that you learn to analyze conditions for yourself. The decision is made based on several factors. One of the most important factors is the existing weather conditions.
 type: Resource
-topics:
+topic:
   - Weather
-tags:
-  - aviation
-  - classnotes
-  - ppl
 Chapter: Chapter01
 status: Active
 Book: Volume01
-category: Aviation
+categories:
+  - Aviation
+dateCreated: 2024-10-17T15:53
+dateUpdated: 2025-01-31T14:41
+tags:
+  - classnotes
 ---
-Before your flight lesson, you must make an important decision – whether to fly today or not. This is commonly referred to as the go/no-go decision. Even though at this stage of your education your flight instructor will help you make this decision, it’s important that you learn to analyze conditions for yourself. The decision is made based on several factors. One of the most important factors is the existing weather conditions.
-
-
 Factors: 
 - Weather
 - Visibility

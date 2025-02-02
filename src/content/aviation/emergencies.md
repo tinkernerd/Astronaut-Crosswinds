@@ -1,14 +1,9 @@
 ---
 title: Emergencies in Aviation
 excerpt: Emergencies in aviation are rare but require quick thinking and adherence to procedures. This guide covers common emergencies, best practices, and resources to help pilots manage unexpected situations.
-tags:
-  - airports
-  - aviation
-  - flight
-  - emergencies
-  - dashboard
-category: Aviation
-topics:
+categories: 
+  - Aviation
+topic:
   - Emergencies
 type: Dashboard
 status: Active
@@ -17,6 +12,7 @@ banner: {
   src: "https://aviationsmsinfo.asms-pro.com/hubfs/images/Blog_Images/what-Emergency-Response-Plans-are-and-why-you-Need-it.png",
   alt: "Aviation Emergencies"
 }
+dateUpdated: 2025-01-31T14:41:48
 ---
 ## 🛑 Key Emergency Concepts for Pilots:
 

@@ -1,7 +1,7 @@
 a {
   text-decoration: none;
-  //color: var(--links);
-  color: var(--theme-accent); 
+  color: var(--links);
+  //color: var(--button-base);
 }
 
 a:hover {
@@ -25,6 +25,7 @@ a:hover {
   border-color: transparent;
   text-decoration: none;
   line-height: var(--lh-1);
+  margin: var(--space-sm);
 
   &:focus-visible {
     box-shadow: 0 0 0 3px hsl(var(--theme-bg)), 0 0 0 6px var(--type);
@@ -46,7 +47,7 @@ a:hover {
   }
   &.filled {
     --fill: var(--type);
-    color: var(--theme-bg);
+    color: var(--theme-text);
   }
   &.bordered {
     border-color: var(--type);

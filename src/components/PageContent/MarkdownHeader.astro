@@ -1,0 +1,45 @@
+---
+import { slugify, formatDate } from "@/js/utils";
+const { title, excerpt, topic, category, dateUpdated, author, source, isArticle } = Astro.props;
+---
+
+<div class="markdown-header">
+  <section class="tags-category">
+    <h1 class="title">{title}</h1> 
+    {category && topic && (
+      <>
+        <a href={`/${slugify(category)}`} class="badge">{`${slugify(category)}`}</a>
+        <span class="divider">|</span>
+        <small>
+          {Array.isArray(topic) ? (
+            topic.slice(0, 3).map((t: string) => ( // Limit to 3 topics
+              <small>
+                <a href={`/${slugify(category)}/${slugify(t)}`} class="badge">{t}</a>
+              </small>
+            ))
+          ) : (
+            <span>No topics</span> // Fallback in case topics are missing
+          )}
+        </small>
+      </>
+    )}
+<p>
+  {isArticle && (
+    <>
+      By: <a href={source} target="_blank" rel="noopener">{author}</a>{' '}|{' '}
+    </>
+  )}
+  {!isArticle && source && (
+    <>
+      Source: <a href={source} target="_blank" rel="noopener">{source}</a></> )}</p>
+  <p>Last updated: {formatDate(dateUpdated)}</p>
+    <hr />
+    {excerpt && <p>{excerpt}</p>}
+  </section>
+</div>
+<style>
+  .markdown-header hr {
+    width: 800px;
+  }
+
+  </style>

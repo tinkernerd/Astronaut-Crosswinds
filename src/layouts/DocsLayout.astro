@@ -1,24 +1,74 @@
 ---
-import HeadCommon from '../components/HeadCommon.astro'
-import Header from '../components/Header/Header.astro'
-import PageContent from '../components/PageContent.astro'
-import LeftSidebar from '../components/LeftSidebar/LeftSidebar.astro'
-import RightSidebar from '../components/RightSidebar/RightSidebar.astro'
-import MainFooter from '../components/Footer/MainFooter.astro'
+import { getCollection } from "astro:content";
+import { GithubRepo } from "@/data/site.config";
+import fs from "fs";
 
+import HeadCommon from "../components/HeadCommon.astro";
+import Header from "../components/Header/Header.astro";
+import PageContent from "../components/PageContent/PageContent.astro";
+import LeftSidebar from "../components/LeftSidebar/LeftSidebar.astro";
+import RightSidebar from "../components/RightSidebar/RightSidebar.astro";
+import MainFooter from "../components/Footer/MainFooter.astro";
+// Extract props
+const { collection, article, Content, headings } = Astro.props;
 
+// Extract metadata from article
 const {
-    title,
-    description,
-    excerpt,
-    banner,
-    editUrl,
-    headings,
-    topics,
-    category,
-    relatedDocs
-} = Astro.props;
+  title,
+  description,
+  excerpt,
+  dateCreated,
+  dateUpdated,
+  author,
+  source,
+  type,
+  topic = [],
+  categories = [],
+} = article.data;
+const category = categories[0] ?? "";
 
+// ✅ Fetch collection dynamically
+const articles: Array<{
+  id: string;
+  data: { type: string; title?: string; topic?: string[] };
+}> = await getCollection(collection); // ✅ Now `getCollection` is correctly imported
+
+// ✅ Filter and sort `dashboardDocs`
+const dashboardDocs = articles
+  .filter((post) => post.data.type === "Dashboard")
+  .map((post) => ({
+    id: post.id,
+    data: { title: post.data.title ?? "Untitled" },
+    isIndex: post.id === "index",
+  }))
+  .sort((a, b) =>
+    a.isIndex ? -1 : b.isIndex ? 1 : a.data.title.localeCompare(b.data.title)
+  );
+
+// ✅ Filter and sort `relatedDocs`
+const relatedDocs = articles
+  .filter(
+    (post) =>
+      post.id !== article.id && post.data.topic?.some((t) => topic.includes(t))
+  )
+  .map((post) => ({
+    id: post.id,
+    data: { title: post.data.title ?? "Untitled" },
+  }))
+  .sort((a, b) => a.data.title.localeCompare(b.data.title))
+  .slice(0, 10);
+
+// ✅ Construct GitHub edit URL
+const EDIT_URL = GithubRepo.editUrl;
+const currentPage = Astro.url.pathname;
+const basePath = `src/content${currentPage.replace(/\/$/, "")}`;
+const currentFile = fs.existsSync(`${basePath}.mdx`)
+  ? `${basePath}.mdx`
+  : `${basePath}.md`;
+const editUrl = `${EDIT_URL}/${currentFile}`;
+
+// ✅ Determine if it's an article
+const isArticle = type === "Article";
 const hasRightSidebar = headings && headings.length > 0;
 ---
 
@@ -28,20 +78,35 @@ const hasRightSidebar = headings && headings.length > 0;
   </head>
   <body>
     <Header />
-    <main class={`layout ${hasRightSidebar ? '' : 'no-right-sidebar'}`}>
+    <main class={`layout ${hasRightSidebar ? "" : "no-right-sidebar"}`}>
       <aside id="grid-left" class="grid-sidebar" title="Site Navigation">
-        <LeftSidebar {category} />
+        <LeftSidebar {dashboardDocs} {category} />
       </aside>
       <div id="grid-main">
-        <PageContent {title} {editUrl} {excerpt} {banner} {topics} {category} {banner}>
+        <PageContent
+          {title}
+          {author}
+          {source}
+          {isArticle}
+          {editUrl}
+          {excerpt}
+          {topic}
+          {category}
+          {dateCreated}
+          {dateUpdated}
+          {headings}
+        >
           <slot />
+          <Content />
         </PageContent>
       </div>
-      {hasRightSidebar && (
-        <aside id="grid-right" class="grid-sidebar" title="Table of Contents">
-          <RightSidebar {editUrl} {headings} {relatedDocs} {category} />
-        </aside>
-      )}
+      {
+        hasRightSidebar && (
+          <aside id="grid-right" class="grid-sidebar" title="Table of Contents">
+            <RightSidebar {editUrl} {headings} {relatedDocs} {category} />
+          </aside>
+        )
+      }
     </main>
     <MainFooter />
   </body>

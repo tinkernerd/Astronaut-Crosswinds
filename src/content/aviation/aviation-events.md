@@ -1,14 +1,9 @@
 ---
 title: Aviation Events
 excerpt: Aviation events are a great way to connect with fellow enthusiasts, learn about new technologies, and celebrate the wonders of flight. From airshows to educational seminars, there’s something for everyone in the aviation community.
-tags:
-  - airports
-  - aviation
-  - flight
-  - events
-  - dashboard
-category: Aviation
-topics:
+categories: 
+  - Aviation
+topic:
   - Events
 type: Dashboard
 status: Active
@@ -17,6 +12,7 @@ banner: {
   src: "https://media.tinkernerd.dev/obsidian-posters/events.jpg",
   alt: "Events"
 }
+dateUpdated: 2025-01-31T14:41:48
 ---
 
 

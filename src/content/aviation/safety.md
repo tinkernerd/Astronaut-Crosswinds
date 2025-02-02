@@ -1,25 +1,20 @@
 ---
 title: Aviation Safety
 excerpt: Safety is the foundation of aviation and is emphasized at every level, from preflight planning to postflight debriefing. This guide covers essential safety concepts, procedures, and resources to ensure you operate safely and efficiently.
-tags:
-  - airports
-  - aviation
-  - flight
-  - safety
-  - dashboard
-category: Aviation
-topics:
+categories: 
+  - Aviation
+topic:
   - Safety
 type: Dashboard
 status: Active
 dateCreated: 2024-12-30
+dateUpdated: 2025-01-31T14:41:48
 banner: {
   src: "https://media.tinkernerd.dev/obsidian-posters/safety.jpg",
   alt: "saftey"
 }
-
 ---
-## 🛡️ Key Safety Concepts for Pilots:
+## Key Safety Concepts for Pilots
 
 # Preflight Safety
 - **Thorough Inspections**

@@ -1,28 +1,22 @@
 ---
 title: VFR & IFR Waypoints
 excerpt: Waypoints are essential for navigation, serving as reference points in the airspace for both VFR and IFR operations. This guide explains the types of waypoints, their uses, and how to incorporate them into your flight planning.
-tags:
-  - airports
-  - aviation
-  - flight
-  - VFR
-  - IFR
-  - waypoints
-  - dashboard
-category: Aviation
-topics:
+categories: 
+  - Aviation
+topic:
   - Waypoints
   - VFR
   - IFR
 type: Dashboard
 status: Active
-dateCreated: 2024-12-30
 banner: { 
   src: "https://media.tinkernerd.dev/obsidian-posters/waypoints.jpg",
   alt: "Waypoints"
 }
+dateCreated: 2024-12-30
+dateUpdated: 2025-01-31T14:41:48
 ---
-## 📍 Key Concepts for VFR & IFR Waypoints:
+## Key Concepts for VFR & IFR Waypoints
 
 # What Are Waypoints?
 - **Definition**

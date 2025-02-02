@@ -3,9 +3,8 @@
   width: 100%;
   position: sticky;
   top: 0;
-  margin-top: 10px; 
+  //margin-top: 10px; 
   //padding: 0.1rem 1rem;
-  
 
   &-inner {
     height: 100%;
@@ -27,7 +26,7 @@
 }
 
 .heading {
-  font-size: 1rem;
+  //font-size: 1rem;
   font-weight: bold;
 }
 
@@ -35,7 +34,7 @@
   font-weight: bold;
 }
 
-// Header Links
+// Header Links (TOC)
 .header-link {
   font-size: 1em;
   transition: border-inline-start-color 100ms ease-out, background-color 200ms ease-out;
@@ -90,10 +89,23 @@
   }
 }
 
-// Edit-on-GitHub Link
-.edit-on-github {
-  text-decoration: none;
-  font: inherit;
-  color: inherit;
-  font-size: 1rem;
+
+// Related Notes
+.related-notes {
+  a{
+    text-decoration: none;
+    color: var(--theme-text)
+  }
+
+  .heading {
+    //font-size: 1rem;
+    font-weight: bold;
+  }
+}
+
+// Responsive Design
+@media (max-width: 1024px) { 
+  .sidebar-nav {
+    display: none; // Hides sidebar on small screens
+  }
 }

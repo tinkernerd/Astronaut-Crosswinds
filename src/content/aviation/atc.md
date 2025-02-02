@@ -1,15 +1,11 @@
 ---
 title: Air Traffic Control (ATC)
 excerpt: Air Traffic Control (ATC) ensures the safety and efficiency of the National Airspace System (NAS) by coordinating aircraft movements. Understanding ATC communications, services, and procedures is essential for pilots at every level. This guide provides an overview and links to relevant resources, including the **AIM (Aeronautical Information Manual)**.
-tags:
-  - airports
-  - aviation
-  - flight
+categories: 
+  - Aviation
+topic:
   - ATC
-  - dashboard
-category: Aviation
-topics:
-  - ATC
+  - Airspace
 type: Dashboard
 status: Active
 dateCreated: 2024-12-30
@@ -17,6 +13,7 @@ banner: {
   src: "https://www.jetforums.net/attachments/tower-airport-hamburg-jpg.9575/",
   alt: "Airport Tower"
 }
+dateUpdated: 2025-01-31T14:41:48
 ---
 # Key ATC Concepts for Pilots
 

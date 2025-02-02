@@ -10,7 +10,6 @@ type Props = {
 }
 const {headings, relatedDocs, category} = Astro.props
 ---
-
 <nav class="sidebar-nav" aria-labelledby="grid-right">
   <div class="sidebar-nav-inner">
     {headings && headings.length > 0 && <TableOfContents {headings} />}

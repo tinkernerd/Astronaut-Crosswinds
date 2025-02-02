@@ -1,0 +1,23 @@
+---
+type Props = {
+  editHref: string
+}
+const { editHref } = Astro.props
+---
+<footer class="markdown-footer">
+  <div class="edit-href">
+    { editHref &&
+      <a href={editHref}>Edit this page ✎ </a>
+    }
+  </div>
+  <div class="back-to-top">
+    <a href="#top">Back to top ⬆</a>
+  </div>
+</footer>
+
+<script is:inline>
+  document.querySelector('.back-to-top a').addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>

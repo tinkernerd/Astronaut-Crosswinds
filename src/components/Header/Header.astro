@@ -3,8 +3,6 @@ import { siteConfig, MenuLinks } from '@/site-config'
 import HeaderLink from "./HeaderLink.astro";
 import ThemeSwitch from './ThemeSwitch.astro';
 
-import { Icon } from "astro-icon/components";
-
 const MenuLinksArray = Object.values(MenuLinks);
 ---
 
@@ -55,31 +53,8 @@ const MenuLinksArray = Object.values(MenuLinks);
       <ThemeSwitch />
     </div>
 
-    <!-- Menu Toggle Button (Moved to Right) -->
-    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
-      <Icon name="tabler:menu" height="30px" />
-    </button>
-  </nav>
 
-  <!-- Mobile Slide-Out Menu -->
-  <div class="mobile-menu" id="mobile-menu">
-    <button class="close-menu" id="close-menu" aria-label="Close navigation">×</button>
 
-    <div class="mobile-nav-links">
-      {MenuLinksArray.map((link) => (
-        <HeaderLink 
-          href={link.url}
-          aria-label={link.title}>
-          {link.title}
-        </HeaderLink>
-      ))}
-    </div>
-
-    <div class="mobile-theme-switcher">
-      <ThemeSwitch />
-    </div>
-  </div>
-</header>
 
 <!-- JavaScript for Menu Toggle -->
 <script is:inline>

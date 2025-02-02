@@ -2,24 +2,20 @@
 title: Airport Operations & Air Traffic
 description: Airport operations and air traffic management are vital to the safe and efficient flow of aircraft on the ground and in the skies. 
 excerpt: Airport operations and air traffic management are vital to the safe and efficient flow of aircraft on the ground and in the skies. This guide provides insights into airport operations, airfield markings, and the integration of air traffic management.
-tags:
-  - airports
-  - aviation
-  - flight
-  - operations
-  - dashboard
-category: Aviation
-topics:
+topic:
  - Airport Operations
  - Air Traffic
  - Airport
 type: Dashboard
 status: Active
 dateCreated: 2024-12-30
+dateUpdated: 2025-01-31T14:41:48
 banner: {
   src: "https://media.licdn.com/dms/image/v2/D4E12AQGXkvydioPgZQ/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1702737684652?e=2147483647&v=beta&t=Bp3cwaMjZefsmyTIz230xTsve-DSuWEDEPoLmnjbqXw",
   alt: "AI Image",
 }
+categories:
+  - Aviation
 ---
 # Airport Operations & Air Traffic
 

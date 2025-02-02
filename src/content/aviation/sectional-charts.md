@@ -1,21 +1,18 @@
 ---
 title: Sectional Charts
-tags:
-  - sectionalcharts
-  - flight
-  - aviation
-dateCreated: 2024-04-09
-topics:
+excerpt: Sectional charts are essential tools for pilots, providing detailed information about terrain, airspace, and navigation aids. These charts are specifically designed for visual navigation (VFR) and are a cornerstone of aviation safety and planning.
+topic:
   - Charts
+  - Navigation
 type: Resource
 status: Active
-category: Aviation
-outline: deep
+categories: 
+  - Aviation
+dateCreated: 2024-04-09
+dateUpdated: 2025-01-31T14:41:48
+tags:
+  - classnotes
 ---
-
-# Sectional Charts
-
-Sectional charts are essential tools for pilots, providing detailed information about terrain, airspace, and navigation aids. These charts are specifically designed for visual navigation (VFR) and are a cornerstone of aviation safety and planning.
 
 ## What Are Sectional Charts?
 

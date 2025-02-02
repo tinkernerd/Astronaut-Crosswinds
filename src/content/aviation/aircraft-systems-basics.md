@@ -2,23 +2,16 @@
 title: Aircraft Systems Basics
 description: Understanding the basic systems of an aircraft is crucial for every pilot.
 excerpt: Understanding the basic systems of an aircraft is crucial for every pilot. These systems work together to ensure safe and efficient operation during flight. This guide provides an overview of the key systems found in most general aviation aircraft.
-tags:
-  - airports
-  - aviation
-  - flight
-  - systems
-  - aircraft
-  - dashboard
-category: Aviation
-topics:
+topic:
   - Aircraft Systems
+tags:
+  - classnotes
 type: Dashboard
 status: Active
 dateCreated: 2024-12-30
-banner: {
-	src: "https://media.tinkernerd.dev/obsidian-posters/aircraft-systems.jpg",
-	alt: "Air systems basics"
-}
+dateUpdated: 2025-01-31T14:41:48
+categories:
+  - Aviation
 ---
 # Key Aircraft Systems
 

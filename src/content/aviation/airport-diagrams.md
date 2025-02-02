@@ -2,15 +2,9 @@
 title: Airport Diagrams
 description: Airport diagrams provide critical information for day to day operations involved in flying. 
 excerpt: Airport diagrams provide critical information for ground navigation, including runway layouts, taxiways, ramps, and other operational details. They are essential tools for ensuring safety and efficiency during all phases of ground operations.
-tags:
-  - airports
-  - aviation
-  - flight
-  - airport diagrams
-  - dashboard
-category: Aviation
-topics: 
+topic: 
   - Airport Diagrams
+  - Navigation
 type: Dashboard
 status: Active
 dateCreated: 2024-12-30
@@ -19,6 +13,9 @@ banner: {
 	alt: "404"
 }
 
+dateUpdated: 2025-01-31T14:41:48
+categories:
+  - Aviation
 ---
 
 # 🛬 Airport Diagrams 🗺️

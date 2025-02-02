@@ -9,8 +9,7 @@
   letter-spacing: 0.054em;
   text-transform: uppercase;
   font-size: var(--fs-sm);
-
-
+  margin-right: 0.5rem;
   &:hover {
     background-color: var(--theme-accent-muted);
     opacity: 0.8;

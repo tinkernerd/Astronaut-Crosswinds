@@ -1,14 +1,9 @@
 ---
 title: Weather for Pilots
 excerpt: Understanding the weather is crucial to any pilot, whether you're flying VFR or IFR. Below are some key concepts and resources to help you navigate the skies safely, no matter what Mother Nature throws your way.
-tags:
-  - airports
-  - aviation
-  - flight
-  - weather
-  - dashboard
-category: Aviation
-topics:
+categories: 
+  - Aviation
+topic:
   - Weather
 type: Dashboard
 status: Active
@@ -17,6 +12,7 @@ banner: {
   src: "https://media.tinkernerd.dev/obsidian-posters/weather.jpg",
   alt: "Weather for Pilots"
 }
+dateUpdated: 2025-01-31T14:41:48
 ---
 ## 🌦 Key Weather Concepts for Pilots:
 

@@ -48,11 +48,14 @@ const { title, description } = Astro.props;
   // Apply system preference as default
   applyTheme(systemPreference);
 
-
-
   // Listen for system preference changes
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
     const newSystemTheme = event.matches ? 'dark' : 'light';
     applyTheme(newSystemTheme);
   });
+</script>
+<script is:inline>
+  console.log('%c Wow! ', 'font-size: 100px; color: white; background-color: black; border-radius: 5px;');
+  console.log('Looks like you must like code!');
+  console.log('You should look at the source for this website: https://github.com/tinkernerd/tinkerverse');
 </script>

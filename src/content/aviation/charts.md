@@ -1,15 +1,11 @@
 ---
 title: Aviation Charts
 excerpt: Aviation charts are essential tools for planning and conducting flights. They provide critical information about airspace, terrain, navigation aids, and airport details. This guide explains the types of charts and their uses to ensure you’re well-prepared for every flight.
-tags:
-  - airports
-  - aviation
-  - flight
-  - charts
-  - dashboard
-category: Aviation
-topics:
+categories: 
+  - Aviation
+topic:
   - Charts
+  - Navigation
 type: Dashboard
 status: Active
 dateCreated: 2024-12-30
@@ -17,6 +13,7 @@ banner: {
   src: "https://media.tinkernerd.dev/obsidian-posters/charts.jpg",
   alt: "Aviation Charts"
   }
+dateUpdated: 2025-01-31T14:41:48
 ---
 ## 📖 Key Chart Concepts for Pilots:
 

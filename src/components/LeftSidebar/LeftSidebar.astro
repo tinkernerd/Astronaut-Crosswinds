@@ -1,28 +1,22 @@
 ---
-import { getCollection } from "astro:content";
-import { SortDocs } from "../../js/utils";
-
-const TheDocs = await getCollection("docs");
-
-const formattedDocs = SortDocs(TheDocs, { sortByTitle: true, sortByDate: false });
-
+import { slugify } from '@/js/utils';
 interface Props {
   header?: string;
   category?: string;
+  dashboardDocs?: any;
 }
-const { category } = Astro.props;
+const { category, dashboardDocs } = Astro.props;
 ---
 
 <nav class="docs-nav" aria-labelledby="grid-left">
+  <h2 class="heading">{category}<hr /></h2>
   <ul class="nav-groups">
     <div class="nav-group">
-      <h2 class="title"><a href="/{category}">{category}</a>
-        <hr /></h2>
       <ul>
         {
-          formattedDocs.map((docs: any) => (
+          dashboardDocs.map((docs: any) => (
             <li class="nav-link">
-              <a href={`/docs/${docs.id}`}>{docs.data.title}</a>
+              <a href={`/${slugify(category)}/${docs.id}`}>{docs.data.title}</a>
             </li>
           ))
         }

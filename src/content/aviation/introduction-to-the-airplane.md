@@ -1,17 +1,18 @@
 ---
 title: Introduction to the Airplane
 description: Introduction to the Airplane
-dateCreated: 2024-10-17T16:52
 type: Resource
-topics:
+topic:
   - Aircraft
-tags:
-  - aviation
-  - classnotes
 Chapter: Chapter01
+tags:
+  - classnotes
 status: Active
 Book: Volume01
-category: Aviation
+categories: 
+  - Aviation
+dateUpdated: 2025-01-31T14:41:48
+dateCreated: 2024-10-17T16:52
 ---
 ### Aircraft Climb Forces Diagram
 

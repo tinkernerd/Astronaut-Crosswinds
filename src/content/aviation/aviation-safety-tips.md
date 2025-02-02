@@ -1,15 +1,9 @@
 ---
 title: Aviation Safety Tips
 excerpt: Aviation safety begins with preparation, awareness, and adherence to best practices. These safety tips are designed to help pilots of all levels maintain high safety standards and mitigate risks during flight operations.
-tags:
-  - airports
-  - aviation
-  - flight
-  - safety
-  - tips
-  - dashboard
-category: Aviation
-topics:
+categories: 
+  - Aviation
+topic:
   - Safety
 type: Dashboard
 status: Active
@@ -18,6 +12,7 @@ banner: {
   src: "https://media.tinkernerd.dev/obsidian-posters/safety-tips.jpg",
   alt: "Safety Tips"
 }
+dateUpdated: 2025-01-31T14:41:48
 ---
 ## 🛡️ Top Aviation Safety Tips:
 

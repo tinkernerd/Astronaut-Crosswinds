@@ -15,12 +15,10 @@ export function formatDate(date) {
   })
 }
 
+
 export function SortDocs(docs, {
   filterDashboard = true, // Ensure we only show "Dashboard" type
-  sortByDate = false,     // Disable date sorting
   sortByTitle = true,     // Enable title sorting
-  limit = undefined,      // Limit number of posts (optional)
-  removeSlash = true,     // Remove trailing slash (optional)
 } = {}) {
   let filteredDocs = docs;
 
@@ -36,11 +34,6 @@ export function SortDocs(docs, {
       const titleB = b.data.title ? b.data.title.trim().toLowerCase() : "";
       return titleA.localeCompare(titleB);
     });
-  }
-
-  // Limit number of posts if specified
-  if (typeof limit === "number") {
-    return filteredDocs.slice(0, limit);
   }
 
   return filteredDocs;

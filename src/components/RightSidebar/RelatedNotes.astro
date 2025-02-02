@@ -14,10 +14,9 @@ const { category } = Astro.props;
 
 ---
 
-<section>
-  <h2>Related Notes</h2>
-  {console.log("Final RelatedDocs in RelatedNotes:", relatedDocs)}
-
+<section class="related-notes">
+  <h2 class="heading">Related Notes</h2>
+  <hr />
   {relatedDocs?.length > 0 ? (
     <ul>
       {relatedDocs.map((relatedDoc: RelatedDoc) => (
