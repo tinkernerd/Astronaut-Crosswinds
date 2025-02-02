@@ -1,4 +1,4 @@
-@use '../utils/include-media.scss' as *;
+@use './include-media.scss' as *;
 .main-header {
   z-index: 11;
   height: var(--theme-navbar-height);

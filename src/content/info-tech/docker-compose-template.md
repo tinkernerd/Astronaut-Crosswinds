@@ -10,7 +10,7 @@ dateUpdated: 2025-01-31T22:04:34
 ---
 # Docker Compose Template
 .env
-```env
+```sh
 Container_Name=Example
 P1=8080
 ```

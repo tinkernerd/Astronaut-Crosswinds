@@ -25,3 +25,9 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# unused content
+src/content/glossary
+src/content/far
+src/content/.github
+src/content/.obsidian
